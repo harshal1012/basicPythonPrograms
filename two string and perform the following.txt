@@ -1,0 +1,29 @@
+object StringComparison {
+  def main(args: Array[String]): Unit = {
+    // Read two strings from the user
+    println("Enter the first string:")
+    val str1: String = scala.io.StdIn.readLine()
+
+    println("Enter the second string:")
+    val str2: String = scala.io.StdIn.readLine()
+
+    // a. Compare using operator
+    val comparisonOperatorResult: Boolean = str1 == str2
+    println(s"Comparison using operator: $comparisonOperatorResult")
+
+    // b. Compare using equals(), compareTo() functions
+    val equalsResult: Boolean = str1.equals(str2)
+    val compareToResult: Int = str1.compareTo(str2)
+
+    println(s"Comparison using equals(): $equalsResult")
+    println(s"Comparison using compareTo(): $compareToResult")
+
+    // c. Find character at position 5
+    val charAtPosition5InStr1: Char = if (str1.length >= 5) str1.charAt(4) else ' '
+    val charAtPosition5InStr2: Char = if (str2.length >= 5) str2.charAt(4) else ' '
+
+    println(s"Character at position 5 in the first string: $charAtPosition5InStr1")
+    println(s"Character at position 5 in the second string: $charAtPosition5InStr2")
+  }
+}
+```

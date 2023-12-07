@@ -1,0 +1,75 @@
+class sports
+{
+        var id:Int=0
+        var name:String="name"
+        var des:String="des"
+        var amt:Int=0 
+}
+
+class indoors extends sports
+{
+        def accept()
+        {
+                println("enter the indoor sports id:")
+                id=scala.io.StdIn.readInt()
+        println("enter the indoor sports name:")
+                name=scala.io.StdIn.readLine()
+println("enter the indoor sports description:")
+                des=scala.io.StdIn.readLine()
+println("enter the indoor sports amt:")
+                amt=scala.io.StdIn.readInt()
+        }
+        def display()
+        {
+          println("indoor sports id:"+id)
+println("indoor sports name:"+name)
+println("indoor sports description:"+des)
+println("indoor sports amt:"+amt)
+        }
+}
+
+class outdoors extends sports
+{
+        def accept()
+        {
+                println("enter the outdoor sports id:")
+                id=scala.io.StdIn.readInt()
+
+                println("enter the outdoor sports name:")
+                name=scala.io.StdIn.readLine()
+
+                println("enter the outdoor sports description:")
+                des=scala.io.StdIn.readLine()
+
+                println("enter the outdoor sports amt:")
+                amt=scala.io.StdIn.readInt()
+        }
+        def display()
+        {
+println("outdoor sports id:"+id)
+println("outdoor sports name:"+name)
+println("outdoor sports description:"+des)
+
+
+println("outdoor sports amt:"+amt)
+        }
+}
+object sport{
+        def main(args:Array[String])
+        {
+                var obj1=new indoors()
+
+                obj1.accept()
+                obj1.display()
+
+
+                var obj2=new outdoors()
+
+                obj2.accept()
+                obj2.display()
+
+        }
+}
+
+
+Define a class Sports (id, name, description, amount). Derive two classes Indoor and Outdoor. Define appropriate constructors and operations. Create an object and perform operations.class sports
